@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="klogo.png">
+    <title>Centrum Kórház</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .header img {
+            width: 161px;
+            height: 151px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+        }
+        .nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .nav a img {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
+        .nav a:hover {
+            background-color: #3d566e;
+        }
+        .main-content {
+            display: flex;
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .main-content .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-content .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .main-content .login-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container img {
+            width: 161px;
+            height: 151px;
+            margin-bottom: 20px;
+        }
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            max-width: 100%;
+        }
+        .login-container form input {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .login-container form button {
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container form button:hover {
+            background-color: #34495e;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Centrum Kórház</h1>
+    </div>
+    <div class="nav">
+        <a href="proba (2).html">Főoldal</a>
+        <a href="#services">Szolgáltatások</a>
+        <a href="rolunktest.html">Rólunk</a>
+        <a href="#contact">Kapcsolatok</a>
+        <a href="vak.html">
+            <img src="blind.png" alt="Ikon">
+        </a>
+    </div>
+    <div class="main-content" id="home">
+        <div class="image-container">
+            <img src="NCS_Pharmacy-Team.jpg" alt="Kórház kép" >
+        </div>
+        <div class="login-container">
+            <img src="klogo.png" alt="Centrum Kórház Logó">
+            <form>
+                <input type="text" placeholder="Felhasználónév" required>
+                <input type="password" placeholder="Jelszó" required>
+                <button type="submit">Bejelentkezés</button>
+                <button type="button" onclick="window.location.href='register.html'">Regisztráció</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 Centrum Kórház. Minden jog fenntartva.
+    </div>
+</body>
+</html>
+
