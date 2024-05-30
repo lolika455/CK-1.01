@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztráció</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+    <div class="main-content">
+        <div class="registration-container">
+            <h2>Regisztráció</h2>
+            <form id="registrationForm">
+                <input type="text" id="username" placeholder="Felhasználónév" required>
+                <input type="password" id="password" placeholder="Jelszó" required>
+                <input type="password" id="confirmPassword" placeholder="Jelszó megerősítése" required>
+                <input type="text" id="realName" placeholder="Igazi név" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <button type="submit">Regisztráció</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const realName = document.getElementById('realName').value;
+            const email = document.getElementById('email').value;
+            
+            // Create a string with the form data
+            const formData = `Felhasználónév: ${username}\nJelszó: ${password}\nJelszó megerősítése: ${confirmPassword}\nIgazi név: ${realName}\nE-mail: ${email}\n`;
+            
+            // Create a blob with the form data
+            const blob = new Blob([formData], { type: 'text/plain;charset=utf-8' });
+            
+            // Save the blob as a file
+            saveAs(blob, 'registration_data.txt');
+        });
+    </script>
+</body>
+</html>
