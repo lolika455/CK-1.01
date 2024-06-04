@@ -98,46 +98,23 @@
             const realName = document.getElementById('realName').value;
             const email = document.getElementById('email').value;
 
-            // Password validation
             const passwordRegex = /^(?=.*[A-Z])(?=.*\W).{8,32}$/;
             if (!passwordRegex.test(password)) {
                 alert('A jelszónak 8-32 karakter hosszúnak kell lennie, és tartalmaznia kell nagybetűt és különleges karaktert.');
                 return;
             }
-
-            // Password confirmation validation
+            
             if (password !== confirmPassword) {
                 alert('A jelszavak nem egyeznek meg!');
                 return;
             }
 
-            // Prepare data for server
             const data = {
                 username: username,
                 password: password,
                 real_name: realName,
                 email: email
             };
-
-            // Send data to server
-            fetch('/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.error) {
-                    alert(data.error);
-                } else {
-                    alert('Sikeres regisztráció!');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
         });
     </script>
 </body>
